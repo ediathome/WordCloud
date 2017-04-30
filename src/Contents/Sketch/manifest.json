@@ -1,17 +1,17 @@
 {
-    "name" : "Hello World!",
-    "identifier" : "com.sketchapp.examples.helloworld",
-    "version" : "1.0.2",
-    "description" : "Pretty much the smallest example Sketch Plugin you could have.",
-    "authorEmail" : "sam@sketchapp.com",
-    "author" : "Sam Deane",
+    "name" : "WordCloud",
+    "identifier" : "de.vt-learn.wordcloud",
+    "version" : "0.1.0",
+    "description" : "A Sketch plugin for creating word and tag clouds",
+    "authorEmail" : "admin@vt-learn.de",
+    "author" : "Martin Kolb",
     "commands" : [
     {
-      "script" : "hello-world.js",
+      "script" : "word-cloud.js",
       "handler" : "onRun",
       "shortcut" : "",
-      "name" : "Hello World!",
-      "identifier" : "helloworld"
+      "name" : "WordCloud",
+      "identifier" : "wordcloud"
     }
   ]
 }

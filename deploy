@@ -2,6 +2,6 @@
 build_path  = __dir__ + '/WordCloud.sketchplugin'
 src_path    = __dir__ + '/src'
 
-Dir.rmdir build_path if File.exists?(build_path)
+`rm -rf #{build_path}` if File.exists?(build_path)
 `cp -R #{src_path} #{build_path}`
 

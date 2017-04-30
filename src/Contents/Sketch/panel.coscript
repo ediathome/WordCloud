@@ -1,0 +1,76 @@
+var pluginName = 'WordCloud';
+
+var getArtboard = function(selection) {
+  currentArtboard = selection[0];
+  var current_class = [currentArtboard class];
+  while(currentArtboard && ([currentArtboard class] !== MSArtboardGroup)) {
+    currentArtboard.setIsSelected(0);
+    currentArtboard = [currentArtboard parentGroup];
+  }
+  currentArtboard.setIsSelected(1);
+  return currentArtboard;
+}
+
+function createSettingsPanel(doc){
+  var accessoryView = NSView.alloc().initWithFrame(NSMakeRect(0,20,278,150))
+    
+  var wordField = NSTextField.alloc().initWithFrame(NSMakeRect(0,0,220,25))
+  wordField.setStringValue('Enter Words here...')
+  // [wordField setFont:[NSFont systemFontOfSize:10]]]
+
+  accessoryView.addSubview(wordField)
+
+  var alert = NSAlert.alloc().init()
+  alert.informativeText =  "Enter your words and hit OK";
+  alert.setMessageText(pluginName);
+  alert.addButtonWithTitle('Ok')
+  alert.addButtonWithTitle('Cancel')
+  alert.setAccessoryView(accessoryView)
+  var responseCode = alert.runModal()
+  var words = wordField.stringValue();
+  // var random = 0;
+  // if ([checkBox state]==NSOnState) {
+  //   random = 1
+  // }
+  var strokewidth = widthInput.floatValue();
+  var strokecolor = colorInput.stringValue();
+
+  var error = false;
+  if (!error) {
+    return [responseCode, words]
+  } else {
+    [doc showMessage: error]
+  }
+}
+
+var addLines = function(points,artboard, group, w, h, posX, posY, doc) {
+  var linegroup = [MSLayerGroup new];
+  artboard.addLayers([linegroup]);
+  linegroup.setName('artboard-lines');
+  var frame = [linegroup frame]
+  [frame setWidth:w]
+  [frame setHeight:h]
+
+  for(var i=0;i<=points.length-1;i++) {
+    var start = points[i][0];
+    var end = points[i][0];
+    var line = NSBezierPath.bezierPath();
+    line.moveToPoint(NSMakePoint(start, end));
+    line.lineToPoint(NSMakePoint(posX,posY));
+    var lineshape = MSShapeGroup.shapeWithBezierPath(line);
+    lineshape.setName('Line - ' + i);
+    var shapeborder = lineshape.style().addStylePartOfType(1);
+    shapeborder.color = MSImmutableColor.colorWithSVGString("#AAAAAA").newMutableCounterpart();
+    shapeborder.thickness = 0.5;
+    linegroup.addLayers([lineshape]);
+  }
+}
+
+var run = function(context) {
+  var doc =  context.document;
+  var selection = context.selection;
+  var allArtboards = [[doc currentPage] artboards];
+  var userData = createSettingsPanel(doc);
+}
+
+// distributeLines(context);

@@ -7,7 +7,7 @@
     "author" : "Martin Kolb",
     "commands" : [
     {
-      "script" : "word-cloud.js",
+      "script" : "panel.coscript",
       "handler" : "onRun",
       "shortcut" : "",
       "name" : "WordCloud",

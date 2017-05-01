@@ -2,7 +2,7 @@
 
 This plugin for [Sketch][] lets you create word clouds and tag clouds inside Sketch.
 
-![Short screencast of the WordCloud plugin](screencast.gif)
+![Short screencast of the WordCloud plugin](https://raw.githubusercontent.com/ediathome/WordCloud/master/screencast.gif)
 
 ## Usage
 1. Open your Sketcho document

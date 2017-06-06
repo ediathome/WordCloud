@@ -1,7 +1,4 @@
 #!/usr/bin/env ruby
 build_path  = __dir__ + '/WordCloud.sketchplugin'
-src_path    = __dir__ + '/src'
 
-`rm -rf #{build_path}` if File.exists?(build_path)
-`cp -R #{src_path} #{build_path}`
 `open #{build_path}`

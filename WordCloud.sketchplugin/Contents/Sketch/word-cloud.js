@@ -15,7 +15,7 @@ function onRun(context) {
 
     for (var i=0; i < words.length; i++) {
         var fontSize = randomFontSize(userData[2], userData[3]);
-        var nl = page.newText({alignment: NSTextAlignmentLeft, systemFontSize: fontSize, text:i + words[i].trim()});
+        var nl = page.newText({alignment: NSTextAlignmentLeft, systemFontSize: fontSize, text: words[i].trim()});
         nl.adjustToFit();
         textLayers[i] = nl;
         oldFontSize = fontSize;

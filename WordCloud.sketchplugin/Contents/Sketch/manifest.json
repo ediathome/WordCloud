@@ -2,6 +2,7 @@
   "name" : "WordCloud",
   "identifier" : "de.vt-learn.wordcloud",
   "appcast": "https://api.sketchpacks.com/v1/plugins/de.vt-learn.wordcloud/appcast",
+  "compatibleVersion": "43.2",
   "version" : "0.2.0",
   "description" : "A Sketch plugin for creating word and tag clouds",
   "authorEmail" : "admin@vt-learn.de",

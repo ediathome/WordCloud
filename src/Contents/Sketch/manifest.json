@@ -1,11 +1,12 @@
 {
-    "name" : "WordCloud",
-    "identifier" : "de.vt-learn.wordcloud",
-    "version" : "0.1.0",
-    "description" : "A Sketch plugin for creating word and tag clouds",
-    "authorEmail" : "admin@vt-learn.de",
-    "author" : "Martin Kolb",
-    "commands" : [
+  "name" : "WordCloud",
+  "identifier" : "de.vt-learn.wordcloud",
+  "appcast": "https://api.sketchpacks.com/v1/plugins/de.vt-learn.wordcloud/appcast",
+  "version" : "0.2.0",
+  "description" : "A Sketch plugin for creating word and tag clouds",
+  "authorEmail" : "admin@vt-learn.de",
+  "author" : "Martin Kolb",
+  "commands" : [
     {
       "script" : "word-cloud.js",
       "handler" : "onRun",

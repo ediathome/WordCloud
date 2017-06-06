@@ -147,13 +147,6 @@ function createSettingsPanel(){
     var words = wordField.stringValue();
     var vrand = verticalRandomness.integerValue();
 
-    // var random = 0;
-    // if ([checkBox state]==NSOnState) {
-    //   random = 1;
-    // }
-    // var strokewidth = widthInput.floatValue();
-    // var strokecolor = colorInput.stringValue();
-
     return [responseCode, words, minfs, maxfs, vrand];
 };
 

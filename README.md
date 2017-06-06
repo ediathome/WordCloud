@@ -18,9 +18,9 @@ This plugin for [Sketch][] lets you create word clouds and tag clouds inside Ske
 ## Planned Features 
 I plan to add the following features:
 
+* improve randomised layout so it looks more like a dense cloud
 * add angle variation
 * add colour schemes
-* improve randomised layout so it looks more like a dense cloud
 
 ## Feedback
 If you have any suggestions, requests etc. use the issues section here on Github or contact me on twitter @gappedapp

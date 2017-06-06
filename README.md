@@ -23,7 +23,7 @@ I plan to add the following features:
 * add colour schemes
 
 ## Feedback
-If you have any suggestions, requests etc. use the issues section here on Github or contact me on twitter @gappedapp
+If you have any suggestions, requests etc. use the issues section here on Github or contact me on twitter [@gappedapp](https://twitter.com/gappedapp)
 
 [Sketch]: http://bohemiancoding.com/sketch/
 
